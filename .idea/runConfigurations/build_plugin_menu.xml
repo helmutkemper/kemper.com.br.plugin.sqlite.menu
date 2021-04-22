@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="build plugin menu" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="kemper.com.br.plugin.sqllite.menu" />
+    <working_directory value="$PROJECT_DIR$" />
+    <go_parameters value="-buildmode=plugin -o $PROJECT_DIR$/menu.sqlite.so" />
+    <kind value="PACKAGE" />
+    <package value="github.com/helmutkemper/kemper.com.br.plugin.sqllite.menu" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>
