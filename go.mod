@@ -1,4 +1,4 @@
-module github.com/helmutkemper/kemper.com.br.plugin.sqllite.menu
+module github.com/helmutkemper/kemper.com.br.plugin.sqlite.menu
 
 go 1.16
 
