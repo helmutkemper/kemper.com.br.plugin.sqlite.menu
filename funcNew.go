@@ -5,19 +5,18 @@ import (
 	"github.com/helmutkemper/util"
 )
 
-func New() (referenceInicialized *SQLiteMenu, err error) {
-	referenceInicialized = &SQLiteMenu{}
-	err = referenceInicialized.Connect(constants.KSQLiteConnectionString)
+func (e *SQLiteMenu) New() (referenceInicialized interface{}, err error) {
+	err = e.Connect(constants.KSQLiteConnectionString)
 	if err != nil {
 		util.TraceToLog()
 		return
 	}
 
-	err = referenceInicialized.Install()
+	err = e.Install()
 	if err != nil {
 		util.TraceToLog()
 		return
 	}
 
-	return
+	return e, nil
 }

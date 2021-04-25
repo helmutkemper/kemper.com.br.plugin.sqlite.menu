@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"errors"
 	dataformat "github.com/helmutkemper/kemper.com.br.module.dataformat"
 	"github.com/helmutkemper/util"
 )
@@ -18,6 +19,10 @@ func (e *SQLiteMenu) GetClassroomMenuFields() (menu []dataformat.Menu, length in
 	var itemOrder int
 
 	menu = make([]dataformat.Menu, 0)
+
+	if e.Database == nil {
+		panic(errors.New("database menu is nil"))
+	}
 
 	rows, err = e.Database.Query(
 		`
