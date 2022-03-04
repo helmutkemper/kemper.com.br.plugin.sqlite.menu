@@ -6,4 +6,4 @@ GOTESTSUM ?= gotestsum
 ## Monta o plugin
 build:
 	@$(GO) mod tidy
-	@$(GO) build -buildmode=plugin -o ../../main.site/plugin/menu.sqlite.so
+	@$(GO) build -buildmode=plugin -o ../../cmd/plugin/menu.sqlite.so
